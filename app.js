@@ -74,7 +74,7 @@ if (playGame === 'Y') {
     alert('Well even if you don\'t, welcome to his page!');
   }
   var finalScore = (correctAnswer / counter) * 100;
-  prompt('Your final score is ' + finalScore + '%!');
+  alert('Your final score is ' + finalScore + '%!');
 
 } else if (playGame === 'N') {
   console.log('user does not want to play the game');
