@@ -41,7 +41,7 @@ if (playGame === 'Y') {
   }
 
 } else if (playGame === 'N') {
-  alert('No problem, we don\'t have to. If you change your mind, refresh the page to play.');
+  alert('No problem, we don\'t have to. Enjoy the page in the meantime! If you change your mind, refresh the page to play.');
 } else {
-  alert('That was not a Y or N answer, please refresh the page to try again.');
+  alert('That was not a Y or N answer, please refresh the page to try again if you want. Enjoy the page otherwise!');
 }
