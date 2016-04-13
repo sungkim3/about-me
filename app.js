@@ -126,9 +126,9 @@ if (playGame === 'Y' || playGame === 'YES') {
   if (answer === 'Y' || 'YES') {
     alert('We should hang out. ;)');
   } else {
-    alert('Well even if you don\'t, welcome to his page!');
+    alert('Well even if you don\'t, I\'ll still be your friend!');
   }
-  alert('You got a total of ' + correctAnswer + ' out of ' + counter + ' correct! Don\'t worry, I didn\'t include that last one.');
+  alert('You got a total of ' + correctAnswer + ' out of ' + counter + ' correct! Don\'t worry, I didn\'t include that last one. Enjoy the webpage!');
 
 } else if (playGame === 'N' || playGame === 'NO') {
   console.log('user does not want to play the game');
