@@ -6,64 +6,30 @@ alert('Nice to meet you ' + userName + '\!');
 // stored userName to be utilized to make game more personal when interacting
 var counter = 0;
 var correctAnswer = 0;
-var playGame;
-playGame = prompt('Would you like to play a guessing game about me? Please answer Y or N').toUpperCase();
+
+var playGame = prompt('Would you like to play a guessing game about me? Please answer Y or N').toUpperCase();
 
 // game will check to see if user wants to play game, if not or invalid input then user will cancel game and enter website
 if (playGame === 'Y' || playGame === 'YES') {
   console.log('user wants to play');
   alert('Great! Let\'s get started. Please answer Y or N for all the questions!');
-
+// arrays to contain the first five questions, answers, and appropriate responses
+  var questionArray = ['Is Sung originally from Washington?', 'Does Sung have any pets?', 'Do you think Sung likes to play sports, ' + userName + '?', 'Does Sung have any siblings?', 'Is Sung Japanese?'];
+  var answerArray = ['NO', 'YES', 'YES', 'YES', 'NO'];
+  var responseArray = ['That\'s right! Sung was originally from Guam', 'You got it! Sung has a Japanese chin and Tibetan spaniel mix living with him. His name is Cookie', 'Yup! His favorite sports are surfing and rock climbing.', 'That\'s right ' + userName + '! Sung has 2 siblings, an older brother and sister.', 'I\'m impressed! Sung gets mistaken for Japanese, but is actually Korean!'];
+  var wrongArray = ['Sorry, Sung is actually originally from Guam.', 'Sorry, Sung does have one dog named Cookie living with him.', 'Even though he spends a lot of time at home, Sung does like to surf and rock climb on occasion!', 'Sadly he has to contend with 2 siblings, both older.', 'While commonly mistake for being Japanese, Sung is actually Korean.'];
   var answer;
 // answer variable will update progressively as user answers each question
-  answer = prompt('Is Sung originally from Washington?').toUpperCase();
-  console.log('answer is ' + answer);
-  counter++;
-  if (answer === 'Y' || answer === 'YES') {
-    alert('Sorry, Sung is actually originally from Guam.');
-  } else {
-    alert('That\'s right! Sung was originally from Guam');
-    correctAnswer++;
-  }
-
-  answer = prompt('Does Sung have any pets?').toUpperCase();
-  console.log('answer is ' + answer);
-  counter++;
-  if (answer === 'Y' || answer === 'YES') {
-    alert('You got it! Sung has a Japanese chin and Tibetan spaniel mix living with him. His name is Cookie');
-    correctAnswer++;
-  } else {
-    alert('Sorry, Sung does have one dog named Cookie living with him.');
-  }
-
-  answer = prompt('Do you think Sung likes to play sports, ' + userName + '?').toUpperCase();
-  console.log('answer is ' + answer);
-  counter++;
-  if (answer === 'Y' || answer === 'YES') {
-    alert('Yup! His favorite sports are surfing and rock climbing.');
-    correctAnswer++;
-  } else {
-    alert('Even though he spends a lot of time at home, Sung does like to surf and rock climb on occasion!');
-  }
-
-  answer = prompt('Does Sung have any siblings?').toUpperCase();
-  console.log('answer is ' + answer);
-  counter++;
-  if (answer === 'Y' || answer === 'YES') {
-    alert('That\'s right ' + userName + '! Sung has 2 siblings, an older brother and sister.');
-    correctAnswer++;
-  } else {
-    alert('Sadly he has to contend with 2 siblings, both older.');
-  }
-
-  answer = prompt('Is Sung Japanese?').toUpperCase();
-  console.log('answer is ' + answer);
-  counter++;
-  if (answer === 'Y' || answer === 'YES') {
-    alert('While commonly mistake for being Japanese, Sung is actually Korean.');
-  } else {
-    alert('I\'m impressed! Sung gets mistaken for Japanese, but is actually Korean!');
-    correctAnswer++;
+  for (y = 0; y < questionArray.length; y++) {
+    answer = prompt(questionArray[y]).toUpperCase();
+    console.log('answer is ' + answer);
+    counter++;
+    if (answer === answerArray[y] || answer === answerArray[y][0]) {
+      alert(responseArray[y]);
+      correctAnswer++;
+    } else {
+      alert(wrongArray[y]);
+    }
   }
 // This is the number guessing game utilizing a do/while loop
   var tries = 0;
@@ -107,13 +73,13 @@ if (playGame === 'Y' || playGame === 'YES') {
     }
     console.log('User guessed ' + answer + '.');
     // a for loop that cycles through the possible answers until a correct answer is found
-    for (i = 0; i < placeAnswer.length; i++) {
+    for (var i = 0; i < placeAnswer.length; i++) {
       if (answer === placeAnswer[i]) {
         alert('Thats right! I visited ' + placeAnswer[i] + '.');
         tries = 8;
         correctAnswer++;
-        for (i = 0; i < placeAnswer.length; i++) {
-          alert('I visited ' + placeAnswer[i] + '.');
+        for (var x = 0; x < placeAnswer.length; x++) {
+          alert('I visited ' + placeAnswer[x] + '.');
         }
       }
     }
@@ -123,12 +89,12 @@ if (playGame === 'Y' || playGame === 'YES') {
 
   answer = prompt('Last question. Do you think Sung is good looking??').toUpperCase();
   console.log('answer is ' + answer);
-  if (answer === 'Y' || 'YES') {
+  if (answer === 'Y' || answer === 'YES') {
     alert('We should hang out. ;)');
   } else {
     alert('Well even if you don\'t, I\'ll still be your friend!');
   }
-  alert('You got a total of ' + correctAnswer + ' out of ' + counter + ' correct! Don\'t worry, I didn\'t include that last one. Enjoy the webpage!');
+  alert('You got a total of ' + correctAnswer + ' out of ' + counter + ' correct ' + userName + '! Don\'t worry, I didn\'t include that last one. Enjoy the webpage!');
 
 } else if (playGame === 'N' || playGame === 'NO') {
   console.log('user does not want to play the game');
