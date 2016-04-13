@@ -18,66 +18,70 @@ if (playGame === 'Y' || playGame === 'YES') {
 // answer variable will update progressively as user answers each question
   answer = prompt('Is Sung originally from Washington?').toUpperCase();
   console.log('answer is ' + answer);
-  counter += 1;
+  counter++;
   if (answer === 'Y' || answer === 'YES') {
     alert('Sorry, Sung is actually originally from Guam.');
   } else {
     alert('That\'s right! Sung was originally from Guam');
-    correctAnswer += 1;
+    correctAnswer++;
   }
 
   answer = prompt('Does Sung have any pets?').toUpperCase();
   console.log('answer is ' + answer);
-  counter += 1;
+  counter++;
   if (answer === 'Y' || answer === 'YES') {
     alert('You got it! Sung has a Japanese chin and Tibetan spaniel mix living with him. His name is Cookie');
-    correctAnswer += 1;
+    correctAnswer++;
   } else {
     alert('Sorry, Sung does have one dog named Cookie living with him.');
   }
 
   answer = prompt('Do you think Sung likes to play sports, ' + userName + '?').toUpperCase();
   console.log('answer is ' + answer);
-  counter += 1;
+  counter++;
   if (answer === 'Y' || answer === 'YES') {
     alert('Yup! His favorite sports are surfing and rock climbing.');
-    correctAnswer += 1;
+    correctAnswer++;
   } else {
     alert('Even though he spends a lot of time at home, Sung does like to surf and rock climb on occasion!');
   }
 
   answer = prompt('Does Sung have any siblings?').toUpperCase();
   console.log('answer is ' + answer);
-  counter += 1;
+  counter++;
   if (answer === 'Y' || answer === 'YES') {
     alert('That\'s right ' + userName + '! Sung has 2 siblings, an older brother and sister.');
-    correctAnswer += 1;
+    correctAnswer++;
   } else {
     alert('Sadly he has to contend with 2 siblings, both older.');
   }
 
   answer = prompt('Is Sung Japanese?').toUpperCase();
   console.log('answer is ' + answer);
-  counter += 1;
+  counter++;
   if (answer === 'Y' || answer === 'YES') {
     alert('While commonly mistake for being Japanese, Sung is actually Korean.');
   } else {
     alert('I\'m impressed! Sung gets mistaken for Japanese, but is actually Korean!');
-    correctAnswer += 1;
+    correctAnswer++;
   }
 // This is the number guessing game utilizing a do/while loop
   var tries = 0;
   do {
+    // This if/else statement is to correct a minor grammar issue
     if (tries !== 3) {
       answer = prompt('Let\'s try to guess how old I am. I\'ll give you a hint, I\'m less than 50 years old. You get ' + (4 - tries) + ' tries!');
       console.log('User guessed ' + answer);
     } else {
-      answer = prompt('Let\'s try to guess how old I am. I\'ll give you a hint, I\'m less than 50 years old. You get ' + (4 - tries) + ' try!');
+      answer = prompt('Let\'s try to guess how old I am. I\'ll give you a hint, I\'m less than 50 years old. You get ' + (4 - tries) + ' try left!');
       console.log('User guessed ' + answer);
     }
+    // This if/else statement is to first check whether or not the user input a valid response
     if (isNaN(parseFloat(answer)) === false ) {
+      // This if/else statement is evaluating the valid response
       if (parseFloat(answer) === 30) {
         alert('Good job! You got it right!');
+        correctAnswer++;
       } else if (tries === 3) {
         alert('Sorry you ran out of guesses!');
       } else if (parseFloat(answer) < 30) {
@@ -90,6 +94,32 @@ if (playGame === 'Y' || playGame === 'YES') {
     }
     tries++;
   } while (parseFloat(answer) !== 30 && tries < 4);
+  counter++;
+
+  tries = 0;
+  // creates the array of possible answers
+  var placeAnswer = ['JAPAN', 'KOREA', 'GUAM', 'PHILLIPINES', 'COSTA RICA', 'CANADA', 'AUSTRALIA'];
+  do {
+    if (tries !== 6) {
+      answer = prompt('Can you guess some places I\'ve travelled to? You get ' + (7 - tries) + ' tries!').toUpperCase();
+    } else {
+      answer = prompt('Can you guess some places I\'ve travelled to? You get ' + (7 - tries) + ' try left!').toUpperCase();
+    }
+    console.log('User guessed ' + answer + '.');
+    // a for loop that cycles through the possible answers until a correct answer is found
+    for (i = 0; i < placeAnswer.length; i++) {
+      if (answer === placeAnswer[i]) {
+        alert('Thats right! I visited ' + placeAnswer[i] + '.');
+        tries = 8;
+        correctAnswer++;
+        for (i = 0; i < placeAnswer.length; i++) {
+          alert('I visited ' + placeAnswer[i] + '.');
+        }
+      }
+    }
+    tries++;
+  } while (tries < 7);
+  counter++;
 
   answer = prompt('Last question. Do you think Sung is good looking??').toUpperCase();
   console.log('answer is ' + answer);
@@ -98,8 +128,7 @@ if (playGame === 'Y' || playGame === 'YES') {
   } else {
     alert('Well even if you don\'t, welcome to his page!');
   }
-  var finalScore = (correctAnswer / counter) * 100;
-  alert('Your final score is ' + finalScore + '%!');
+  alert('You got a total of ' + correctAnswer + ' out of ' + counter + ' correct! Don\'t worry, I didn\'t include that last one.');
 
 } else if (playGame === 'N' || playGame === 'NO') {
   console.log('user does not want to play the game');
