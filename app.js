@@ -6,6 +6,7 @@ alert('Nice to meet you ' + userName + '\!');
 // stored userName to be utilized to make game more personal when interacting
 var counter = 0;
 var correctAnswer = 0;
+var answer;
 
 var playGame = prompt('Would you like to play a guessing game about me? Please answer Y or N').toUpperCase();
 
@@ -19,7 +20,6 @@ if (playGame === 'Y' || playGame === 'YES') {
     var answerArray = ['NO', 'YES', 'YES', 'YES', 'NO'];
     var responseArray = ['That\'s right! Sung was originally from Guam', 'You got it! Sung has a Japanese chin and Tibetan spaniel mix living with him. His name is Cookie', 'Yup! His favorite sports are surfing and rock climbing.', 'That\'s right ' + userName + '! Sung has 2 siblings, an older brother and sister.', 'I\'m impressed! Sung gets mistaken for Japanese, but is actually Korean!'];
     var wrongArray = ['Sorry, Sung is actually originally from Guam.', 'Sorry, Sung does have one dog named Cookie living with him.', 'Even though he spends a lot of time at home, Sung does like to surf and rock climb on occasion!', 'Sadly he has to contend with 2 siblings, both older.', 'While commonly mistake for being Japanese, Sung is actually Korean.'];
-    var answer;
   // answer variable will update progressively as user answers each question
     for (var y = 0; y < questionArray.length; y++) {
       answer = prompt(questionArray[y]).toUpperCase();
