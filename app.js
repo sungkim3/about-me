@@ -31,6 +31,7 @@ if (playGame === 'Y' || playGame === 'YES') {
       alert(wrongArray[y]);
     }
   }
+
 // This is the number guessing game utilizing a do/while loop
   var tries = 0;
   do {
@@ -63,7 +64,7 @@ if (playGame === 'Y' || playGame === 'YES') {
   counter++;
 
   tries = 0;
-  // creates the array of possible answers
+  //creates the array of possible answers
   var placeAnswer = ['JAPAN', 'KOREA', 'GUAM', 'PHILLIPINES', 'COSTA RICA', 'CANADA', 'AUSTRALIA'];
   do {
     if (tries !== 6) {
@@ -76,11 +77,10 @@ if (playGame === 'Y' || playGame === 'YES') {
     for (var i = 0; i < placeAnswer.length; i++) {
       if (answer === placeAnswer[i]) {
         alert('Thats right! I visited ' + placeAnswer[i] + '.');
+        alert('These are the places I visited: ' + placeAnswer[0] + ', ' + placeAnswer[1] + ', ' + placeAnswer[2] + ', ' + placeAnswer[3] + ', ' + placeAnswer[4] + ', ' + placeAnswer[5] + ', ' + placeAnswer[6] + '.');
         tries = 8;
         correctAnswer++;
-        for (var x = 0; x < placeAnswer.length; x++) {
-          alert('I visited ' + placeAnswer[x] + '.');
-        }
+
       }
     }
     tries++;
