@@ -20,7 +20,7 @@ if (playGame === 'Y' || playGame === 'YES') {
   var wrongArray = ['Sorry, Sung is actually originally from Guam.', 'Sorry, Sung does have one dog named Cookie living with him.', 'Even though he spends a lot of time at home, Sung does like to surf and rock climb on occasion!', 'Sadly he has to contend with 2 siblings, both older.', 'While commonly mistake for being Japanese, Sung is actually Korean.'];
   var answer;
 // answer variable will update progressively as user answers each question
-  for (y = 0; y < questionArray.length; y++) {
+  for (var y = 0; y < questionArray.length; y++) {
     answer = prompt(questionArray[y]).toUpperCase();
     console.log('answer is ' + answer);
     counter++;
