@@ -3,38 +3,58 @@
 
   <head>
     <title>About Me</title>
+    <link rel= "stylesheet" type= "text/css" href= "style.css">
   </head>
 
-  <body>
-      <script src = "app.js"></script>
+  <body class = "background">
+      <script src = "app.js"> </script>
       <!-- accessing app.js javascript code to run the game before the webpage loads -->
-      <h1> <strong>Sung Yul Kim</strong> </h1>
 
-      <h2> <strong>Biography and Goals</strong> </h2>
-      <p> I was born and raised in the small island of Guam on 1985. <br>
-        Throughout the years I have been exposed to a laid back <br>
+      <h1 class = "name"> <strong>Sung Yul Kim</strong> </h1>
+      <ul class = "nameList">
+        <li> Home </li>
+        <li> <a href ="https://www.facebook.com"> Facebook </a> </li>
+        <li> Contacts </li>
+        <li> Address </li>
+      </ul>
+
+      <div class = "header">
+        <div class = "border"></div>
+      </div>
+
+
+      <h2 class = "header1"> Biography and Goals </h2>
+      <div class = "portrait"> <img src="images/haleiwa.jpg"  title = "Sung with his sister Nina at Haleiwa in Oahu"/> </div>
+      <div class = "family"> <img src="images/tarzanfalls.jpg" title = "Sung with his family hiking Tarzan Falls in Guam"/> </div>
+
+      <p class = "para1"> I was born and raised in the small island of Guam on 1985.
+        Throughout the years I have been exposed to a laid back
         family-oriented lifestyle.
       </p>
 
-      <p> My parents moved from Korea post Vietnam War and started up a <br>
-        construction company as the opportunity presented itself due <br>
-        to the military build up at the time. They raised three kids (myself <br>
+      <p class = "para2"> My parents moved from Korea post Vietnam War and started up a
+        construction company as the opportunity presented itself due
+        to the military build up at the time. They raised three kids (myself
         included), two boys and one girl.
       </p>
 
-      <p> In 2003 I moved to Seattle to attend the University of Washington for <br>
-        my bachelors. And then back to Guam in 2008 after the recession hit and <br>
-        was unable to find a job. In 2012 I moved to Hawaii for opportunity, but <br>
-        while the sun and beaches were fun to enjoy I found my life stagnating. <br>
-        That is why I decided to join <strong>Code Fellows</strong> for an opportunity to pursue <br>
-        a meaningful life time career.
+      <p class = "para3"> In 2003 I moved to Seattle to attend the University of
+        Washington for my bachelors. And then back to Guam in 2008 after the recession
+        hit and was unable to find a job. In 2012 I moved to Hawaii for opportunity, but
+        while the sun and beaches were fun to enjoy I found my life stagnating.
+        That is why I decided to join <base target="_blank"><a href="https://www.codefellows.org/">
+        Code Fellows</a></base> for an opportunity to pursue a meaningful life time career.
       </p>
 
-      <p> My goals are to become a <em>top-notch coder</em> through the help of <strong>Code <br>
-        Fellows</strong> and be able to make my folks proud of the career I've developed.
+      <p class = "para4"> My goals are to become a <em>top-notch coder</em> through
+        the help of <base target="_blank"><a href="https://www.codefellows.org/">Code Fellows</a>
+        </base>and be able to make my folks proud of the career I've developed.
       </p>
 
       <h2> <strong>Curriculum Vitae</strong> </h2>
+      <div class = "climbers"><img src = "images/climbing-club.jpg"
+        title="St. John's students enjoying a weekend of climbing with their advisor Mr. Kim."/></div>
+      <div class = "lists">
         <ul> <strong>Education</strong>
           <li> St. John's School HS Cert 2003 </li>
           <li> University of Washington Biochemistry BS 2008 </li>
@@ -55,8 +75,12 @@
           <li> DoubleTree Alana bartender 2015 </li>
           <li> Top of Waikiki bartender 2015 </li>
         </ul>
+      </div>
+
         <!-- using lists and unordered lists to describe education and work experience -->
-        <h2> <strong>Top Ten Places I Want to Visit</strong> </h2>
+      <h2> <strong>Top Ten Places I Want to Visit</strong> </h2>
+        <div class = "map"> <img src = "images/world-map.jpg" /> </div>
+        <div class = "lists2">
           <ol>
             <li> Maldives </li>
             <li> Amsterdam </li>
@@ -68,6 +92,8 @@
             <li> New York City </li>
             <li> South Africa </li>
             <li> Phillipines </li>
+          </ol>
+        </div>
   </body>
 
 </html>
