@@ -20,15 +20,15 @@
   height: 115px;
   border-style: solid;
 }
-
 .name {
-  font-family: Arial, sans-serif;
+  font-family: 'Oswald', Arial, sans-serif;
   margin-bottom: 0px;
   text-align: center;
   text-transform: uppercase;
 }
 
 .nameList {
+  font-family: 'Roboto Condensed', Arial, sans-serif;
   text-align: center;
   padding-left: 0px;
 }
@@ -68,11 +68,13 @@
 }
 
 .lists {
+  font-family: 'Roboto Condensed', Arial, sans-serif;
   margin-left: 175px;
   margin-right: 600px;
 }
 
 .lists2 {
+  font-family: 'Roboto Condensed', Arial, sans-serif;
   margin-left: 750px;
 }
 .lists2 > ol > li {
@@ -85,13 +87,16 @@
 }
 
 h2, h3 {
-  background-image: url("http://wallpaperstock.net/smoothy-grey_wallpapers_978_1280x720.jpg");
+  /*background-image: url("http://wallpaperstock.net/smoothy-grey_wallpapers_978_1280x720.jpg");*/
+  font-family: 'Oswald', Arial;
   text-align: center;
   margin-left: 150px;
   margin-right: 150px;
+  margin-bottom: 0px;
 }
 
 p {
+  font-family: 'Roboto Condensed', Arial, sans-serif;
   text-align: center;
   text-align: justify;
   margin-left: 100px;
@@ -102,4 +107,7 @@ a {
   text-decoration: none;
   font-weight: bold;
   color: rgb(153, 102, 255);
+}
+
+hr {
 }
